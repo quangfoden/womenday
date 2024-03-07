@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Women's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <video id="myVideo" class="bg">
+            <source src="./video/182283 (1080p).mp4" type="video/mp4">
+        </video>
+        <img class="bg" src="./img/horizon-8675_512.gif" alt="">
+        <div class="box">
+            <img class="box_item" src="./img/gift-9344_256.gif" width="100%" height="100%" alt="">
+        </div>
+        <audio id="myAudio">
+            <source src="emxinh.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="card">
+            <img class="cus" src="./img/bgbox.gif" alt="">
+            <div style="margin: 20px;">
+                <h4 class="title">
+                    🥰🥰 Gửi cậu 🥰🥰
+                </h4>
+                <img class="mylove" src="./img/mylove.jpg" alt="">
+                <h4 class="content">
+
+                </h4>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+        var video = document.getElementById("myVideo");
+        var audio = document.getElementById("myAudio");
+        const wrapper = document.querySelector('.wrapper')
+        const box = document.querySelector('.box')
+        const card = document.querySelector('.card')
+        box.onclick = () => {
+            setTimeout(() => {
+                audio.play();
+                video.play()
+                viDeo()
+                textTranform()
+            }, 5000)
+            wrapper.classList.add('active')
+            box.classList.add('active')
+            card.classList.add('active')
+        }
+        var app = document.querySelector('.content');
+
+        function textTranform() {
+            var typewriter = new Typewriter(app, {
+                loop: false
+            });
+            typewriter.typeString('Ngày 8/3 này, Tớ muốn dành một chút thời gian để gửi lời chúc tốt đẹp nhất đến cậu. Chúc cậu luôn được bình an, hạnh phúc và thành công trong mọi lĩnh vực của cuộc sống. Mong mọi điều tốt đẹp sẽ đến với cậu. Chúc cậu ngày 8/3 thật trọn vẹn và ý nghĩa!" 😍😍')
+                .pauseFor(3000)
+                .start();
+        }
+        function viDeo() {
+            video.addEventListener("ended", function () {
+                video.currentTime = 0; // Quay lại thời điểm 0 (bắt đầu của video)
+                video.play(); // Bắt đầu phát video từ đầu
+            });
+        }
+
+    </script>
+</body>
+
+</html>
